@@ -13,8 +13,8 @@ const USER_ACTIVATION_EVENTS = [
   'touchend'
 ]
 
-function unmuteIosAudio () {
-  const AudioContext = window.webkitAudioContext
+function unmuteIosAudio ({ audioContextType }) {
+  const AudioContext = audioContextType
 
   // To detect iOS, check for touch device and confirm Safari-only
   // webkitAudioContext is present.
